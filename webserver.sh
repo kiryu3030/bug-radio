@@ -2,4 +2,4 @@
 
 sleep 1
 cd /home/leon/bug-radio
-npm start
+/home/leon/.nvm/versions/node/v20.19.4/bin/node webserver.js
