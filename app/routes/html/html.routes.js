@@ -23,4 +23,8 @@ htmlRoute.get('/test-led', (req, res) => {
   res.sendFile(path.join(HTML_DIR, 'test-led-2.html'));
 });
 
+htmlRoute.get('/test-camera', (req, res) => {
+  res.sendFile(path.join(HTML_DIR, 'test-led-camera.html'));
+});
+
 module.exports = htmlRoute;
