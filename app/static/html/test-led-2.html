@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>VLC OOK 解碼（邊緣鎖相位 + 最近邊緣面板｜斜率邊緣｜固定中心 ROI）</title>
+<!-- <title>VLC OOK 解碼（邊緣鎖相位 + 最近邊緣面板｜斜率邊緣｜固定中心 ROI）</title> -->
+<title>VLC OOK 解碼</title>
 <style>
   :root { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, sans-serif; }
   body { max-width: 960px; margin: 24px auto; padding: 0 16px; }
@@ -23,7 +24,8 @@
 </style>
 </head>
 <body>
-<h1>可見光 OOK 解碼（2 Hz / 8-bit / 邊緣鎖相位 / 嚴格 preamble / 斜率邊緣 / 固定中心 ROI）</h1>
+<!-- <h1>可見光 OOK 解碼（2 Hz / 8-bit / 邊緣鎖相位 / 嚴格 preamble / 斜率邊緣 / 固定中心 ROI）</h1> -->
+<h1>可見光解碼</h1>
 
 <div class="card">
   <div class="row">
@@ -36,7 +38,7 @@
     <button id="stop" disabled>停止</button>
   </div>
   <div class="row" style="margin-top:8px;">
-    <small>提示：HTTPS 或 localhost 才能取相機。此版本 ROI 固定在畫面中心 150×150 像素。</small>
+    <small hidden>提示：HTTPS 或 localhost 才能取相機。此版本 ROI 固定在畫面中心 150×150 像素。</small>
   </div>
 </div>
 
@@ -48,7 +50,7 @@
   <canvas id="canvas" class="card" width="320" height="240" hidden></canvas>
 </div>
 
-<div class="card" style="margin-top:12px;">
+<div class="card" style="margin-top:12px;" hidden>
   <div class="row"><label>訊號視覺化（亮度、門檻與邊緣 0→1 / 1→0）</label></div>
   <canvas id="scope" width="900" height="180"></canvas>
 </div>
@@ -67,7 +69,7 @@
 </div>
 
 <!-- 最近 N 個邊緣面板 -->
-<div class="card" style="margin-top:12px;">
+<div class="card" style="margin-top:12px;" hidden>
   <div class="row" style="align-items:center;">
     <b>最近邊緣（▲ 0→1 / ▼ 1→0）</b>
     <span class="mono">顯示</span>
